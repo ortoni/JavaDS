@@ -1,4 +1,4 @@
-package interview;
+package all;
 
 public class FibonacciSeries {
 	public static void main(String[] args) {

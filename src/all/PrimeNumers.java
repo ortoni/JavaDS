@@ -1,4 +1,4 @@
-package interview;
+package all;
 
 public class PrimeNumers {
 

@@ -1,4 +1,4 @@
-package interview;
+package all;
 
 public class SumOfNum {
 	public static void main(String[] args) {

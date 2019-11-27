@@ -9,8 +9,9 @@ import java.util.Arrays;
 public class RemoveDuplicates {
 
 	public static void main(String[] args) {
-		int[] input = new int[] { 1, 1, 1, 3, 7, 7, 8, 6, 6, 90, 89, 9, 9, 10, 90, 90 };
-		usingStream(input);
+		int[] input = new int[]{1, 1, 1, 3, 7, 7, 8, 6, 6, 90, 89, 9, 9, 10, 90,
+				90};
+		// usingStream(input);
 		System.out.println();
 		usingSort(input);
 	}
@@ -36,6 +37,12 @@ public class RemoveDuplicates {
 			}
 		}
 		System.out.print(current);
+
+		/*
+		 * int current = input[0]; for (int i = 0; i < input.length; i++) { if
+		 * (current != input[i]) { System.out.print(current + " "); current =
+		 * input[i]; } } System.out.print(current);
+		 */
 	}
 
 	/*
