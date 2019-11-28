@@ -1,4 +1,4 @@
-package all;
+package string;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -10,15 +10,34 @@ public class FIndCharRepetetion {
 
 	public static void main(String[] args) {
 		String name = "koushik";
-		// usingStreams(name);
+		usingStreams(name);
 		// usingMap(name);
-		withOutUsingMap(name);
-		// System.out.println(name);
+		// withOutUsingMap(name);
+
+
 	}
 
-	private static void withOutUsingMap(String name) {
-		char[] charArray = name.toCharArray();
 
+	private static void withOutUsingMap(String name) {
+
+		name = name.replaceAll("\\s", "").toUpperCase();
+		int len = name.length();
+		while (len > 0) {
+			int count = 1;
+			for (int j = 1; j < len; j++) {
+				if (name.charAt(0) == name.charAt(j)) {
+					count++;
+				}
+			}
+			if (count > 1) {
+				System.out.println(name.charAt(0) + " : " + count);
+			}
+
+			String character = String.valueOf(name.charAt(0)).trim();
+			name = name.replaceAll(character, "");
+			len -= count;
+
+		}
 	}
 
 

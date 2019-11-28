@@ -1,4 +1,4 @@
-package all;
+package string;
 
 public class ToRomanNumbers {
 	public static void main(String[] args) {
