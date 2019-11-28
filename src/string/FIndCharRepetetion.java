@@ -9,9 +9,11 @@ import java.util.stream.Collectors;
 public class FIndCharRepetetion {
 
 	public static void main(String[] args) {
-		String name = "koushik";
-		usingStreams(name);
-		// usingMap(name);
+		String name = "koushiK";
+		// System.out.println(name.compareTo("K"));
+
+		// usingStreams(name);
+		usingMap(name);
 		// withOutUsingMap(name);
 
 
@@ -45,7 +47,9 @@ public class FIndCharRepetetion {
 		char[] charArray = name.toCharArray();
 		Map<Character, Integer> map = new LinkedHashMap<>();
 		for (char c : charArray) {
-			boolean containsKey = map.containsKey(c);
+			System.out.println((int) c);
+			boolean containsKey = map.containsKey(c)
+					|| map.containsKey((c) + 32);
 			if (containsKey) {
 				Integer integer = map.get(c);
 				map.put(c, integer + 1);
